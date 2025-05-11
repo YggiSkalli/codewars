@@ -34,19 +34,19 @@ Write a function that takes a string of one or more words and returns the same s
   - Result list: O(n) for processed words.
   - `join()`: O(n) for the final string.
 
-### 2. Manual word reversal with character swapping
+### 2. Generator Expression with Ternary Operator
 - **Approach**:
-  - Split the input string into words using `split()`.
-  - For each word with 5+ letters, convert it to a list of characters, swap characters from both ends inward, and join them back to a string.
-  - Collect processed words in a list and join them with `join()`.
+  - Uses a generator expression to process words directly within `join()`, reversing words with 5+ letters using slicing (`[::-1]`).
+  - Employs a ternary operator for concise conditional logic.
 - **Pros**:
-  - Explicit control over reversal process, similar to low-level programming.
-  - Educational for understanding string manipulation.
+  - Extremely concise, one-line solution.
+  - Memory-efficient due to generator expression.
+  - Idiomatic Python, showcasing advanced syntax.
 - **Cons**:
-  - More complex and less readable than slicing.
-  - Slower due to manual character swapping in Python.
-- **Time Complexity**: O(n), but with higher constants due to manual swapping.
-- **Space Complexity**: O(n), similar to the slicing approach.
+  - Less readable for beginners or those unfamiliar with comprehensions.
+  - Harder to modify for additional conditions.
+- **Time Complexity**: O(n), same as the primary solution.
+- **Space Complexity**: O(n), but slightly more memory-efficient due to generator.
 - 
 ## Example
 ```python

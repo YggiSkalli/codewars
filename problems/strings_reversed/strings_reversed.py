@@ -45,6 +45,21 @@ def spin_words(sentence: str) -> str:
     # Join words with a space and return the result
     return " ".join(result)
 
+#List Comprehension
+#(expression for item in iterable)
+#ternäre Operation (x if condition else y)
+#[] List
+
+def spin_words_list(sentence):
+    return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split(" ")])
+
+#Generator Expression
+#(expression for item in iterable)
+#ternäre Operation (x if condition else y)
+#() Generator
+def spin_words_generator(sentence):
+    return ' '.join(word if len(word)<5 else word[::-1] for word in sentence.split())
+
 # Example usage
 if __name__ == "__main__":
     test_cases = [
