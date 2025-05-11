@@ -11,9 +11,3 @@ To run tests for a specific problem, use:
 ```bash
 python -m unittest tests.test_<problem_name>
 ```
-
-
-little side-note for github use
-git add .
-git commit -m "describe the changes"
-git push origin main
