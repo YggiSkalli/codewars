@@ -18,6 +18,8 @@
 #   ending at the first (default stop), with a step of -1 (backwards).
 # - `join()`: A C-implemented method that concatenates a list of strings, inserting the
 #   specified delimiter (here, a space) between elements.
+import re
+
 
 def spin_words(sentence: str) -> str:
     """Reverses words with 5 or more letters in a given string.
@@ -50,6 +52,7 @@ def spin_words(sentence: str) -> str:
 #ternäre Operation (x if condition else y)
 #[] List
 
+
 def spin_words_list(sentence):
     return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split(" ")])
 
@@ -57,6 +60,8 @@ def spin_words_list(sentence):
 #(expression for item in iterable)
 #ternäre Operation (x if condition else y)
 #() Generator
+
+
 def spin_words_generator(sentence):
     return ' '.join(word if len(word)<5 else word[::-1] for word in sentence.split())
 
