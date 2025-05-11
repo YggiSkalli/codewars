@@ -47,7 +47,21 @@ Write a function that takes a string of one or more words and returns the same s
   - Harder to modify for additional conditions.
 - **Time Complexity**: O(n), same as the primary solution.
 - **Space Complexity**: O(n), but slightly more memory-efficient due to generator.
-- 
+
+### 3. Regular Expression with re.sub()
+- **Approach**:
+  - Uses `re.sub()` with the pattern `\w{5,}` to match words with 5 or more letters.
+  - A lambda function reverses each matched word using slicing (`[::-1]`).
+- **Pros**:
+  - Extremely concise, one-line solution.
+  - Directly modifies the string without splitting and joining.
+  - Demonstrates the power of regular expressions.
+- **Cons**:
+  - Less readable for those unfamiliar with regex and lambda functions.
+  - Harder to extend for additional conditions.
+- **Time Complexity**: O(n), where n is the length of the input string.
+- **Space Complexity**: O(n) for the new string.
+
 ## Example
 ```python
 spin_words("Hey fellow warriors")  # Returns "Hey wollef sroirraw"

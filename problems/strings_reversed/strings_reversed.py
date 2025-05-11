@@ -45,7 +45,7 @@ def spin_words(sentence: str) -> str:
     # Join words with a space and return the result
     return " ".join(result)
 
-#List Comprehension
+#Second Implementation via List Comprehension
 #(expression for item in iterable)
 #ternäre Operation (x if condition else y)
 #[] List
@@ -53,12 +53,17 @@ def spin_words(sentence: str) -> str:
 def spin_words_list(sentence):
     return " ".join([x[::-1] if len(x) >= 5 else x for x in sentence.split(" ")])
 
-#Generator Expression
+#Second Implementation via Generator Expression
 #(expression for item in iterable)
 #ternäre Operation (x if condition else y)
 #() Generator
 def spin_words_generator(sentence):
     return ' '.join(word if len(word)<5 else word[::-1] for word in sentence.split())
+
+# Third implementation using regular expressions
+def spin_words_regex(sentence: str) -> str:
+    """Solution using re.sub() to reverse words with 5+ letters."""
+    return re.sub(r"\w{5,}", lambda w: w.group(0)[::-1], sentence)
 
 # Example usage
 if __name__ == "__main__":
