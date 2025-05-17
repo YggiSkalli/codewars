@@ -25,3 +25,17 @@ from extract_the_domain_name import domain_name
 print(domain_name("http://github.com/carbonfive/raygun"))  # Output: github
 print(domain_name("http://www.zombie-bites.com"))         # Output: zombie-bites
 print(domain_name("https://www.cnet.com"))                # Output: cnet
+```
+
+##  Alternative Solutions to come back to
+
+```python
+def domain_name(url):
+    return url.split("//")[-1].split("www.")[-1].split(".")[0]0
+```
+
+```python
+import re
+def domain_name(url):
+    return re.search('(https?://)?(www\d?\.)?(?P<name>[\w-]+)\.', url).group('name')
+```
