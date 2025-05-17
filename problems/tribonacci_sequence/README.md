@@ -21,3 +21,12 @@
       for i in range(max(0, n - len(signature))):
           res.append(sum(res[-3:]))
       return res
+  ```
+
+## How to Run
+- Main file: tribonacci_sequence.py
+
+- Tests: test_tribonacci_sequence.py
+  ```python 
+  -m unittest test_tribonacci_sequence.py
+  ```
