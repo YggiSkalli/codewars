@@ -13,7 +13,7 @@ def divide_and_multiply(n):
     """
     MOD = 1_000_000_007  # Modulo constant for result.
 
-    ops = 0  # Tracks total number of division-by-2 operations.
+    ops = 0  # Tracks total number of division-by-2 operations. !0 weil +1 +1 +1
     odd_values = []  # Stores numbers after dividing out all factors of 2.
     for num in n:
         while num % 2 == 0:  # Divide by 2 as long as possible.
@@ -39,7 +39,7 @@ def divide_and_multiply_bitshift(n):
         int: Maximum possible sum after operations, modulo 10^9 + 7.
     """
     MOD = 1_000_000_007  # Modulo constant for result.
-    total_power = 1  # Accumulates total power of 2 from all numbers.
+    total_power = 1  # Accumulates total power of 2 from all numbers. !1  weil *2 *2 *2
     odd_values = []  # Stores numbers after dividing out all factors of 2.
 
     for x in n:
